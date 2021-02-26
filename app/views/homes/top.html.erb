@@ -1,4 +1,52 @@
 <div class="main-visual">
     <h1 class="title">ウィークエンドと<br>ショートケーキ</h1>
 </div>
-
+<div class="links">
+    <ul>
+    </ul>
+</div>
+<div class="cp_fullscreenmenu">
+	<input class="toggle" type="checkbox" />
+	<div class="hamburger"><span></span></div>
+	<div class="menu">
+		<div>
+		<ul>
+            <li>
+            <%= link_to posts_path, class: 'home-link text-dark', method: :get do %>
+                自分で作るのが大切だ
+            <% end %>
+            </li>
+            <li>
+            <%= link_to posts_path, class: 'home-link text-dark', method: :get do %>
+                なんでもない日々のこと
+            <% end %>
+            </li>
+            <li>
+            <%= link_to posts_path, class: 'home-link text-dark', method: :get do %>
+                たまに旅に出る
+            <% end %>
+            </li>
+            <% if current_user.admin? %>
+                <li>
+                <%= link_to new_admin_post_path, class: 'home-link text-dark', method: :get do %>
+                    投稿
+                <% end %>
+                </li>
+            <% end %>
+		</ul>
+		</div>
+	</div>
+</div>
+<div class="about">
+    <h1 class="about">About</h1>
+    <h2>coming soon...</h2>
+    <ul>
+    <li>
+    <%= link_to new_user_session_path, class: 'admin-link text-dark', method: :get do %>
+        <i class="fas fa-kiwi-bird fa-5x"></i>
+    <% end %>
+    </li>
+    </ul>
+</div>
+<div class="footer-visual">
+</div>
